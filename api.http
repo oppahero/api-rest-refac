@@ -1,0 +1,46 @@
+### Recuperar todas las peliculas
+GET http://localhost:1234/movies
+
+### Recuperar pelicula por ID
+GET http://localhost:1234/movies/65cfbd1e6a81a5f3ed031c87
+
+### Recuperar todas las peliculas por  genero
+GET http://localhost:1234/movies?genre=Fantasy
+
+### crear una pelicula
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+	"title": "Matrix",
+	"year": 1999,
+	"director": "Lana",
+	"duration": 142,
+	"poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-11200.webp",
+	"genre": [
+		"Terror",
+		"Crime"
+	],
+	"rate": 9.3
+}
+
+### crear una pelicula
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+	"title": "Matrix",
+	"year": "mm"
+}
+
+### Actualizar una película
+PATCH  http://localhost:1234/movies/65cfbd1e6a81a5f3ed031c87
+Content-Type: application/json
+
+{
+	"year": 2012,
+	"duration": 110
+}
+
+### Eliminar una peliculas
+DELETE http://localhost:1234/movies/65cfc478a4875b8b15d96d36
